@@ -1,0 +1,209 @@
+/* General Reset for padding, margins, box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif; 
+}
+
+.header-container {
+    width: 100vw;
+    height: 10vh;
+    padding: 30px;
+    background-color: #ffffff; 
+}
+
+.headerbox {
+    margin: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #e63946; 
+    font-weight: bold;
+}
+
+.header-center {
+    display: none;
+    gap: 20px;
+    font-size: 20px;
+}
+
+/* Media query adjusted to show .header-center on large screens (min 1024px instead of 2500px) */
+@media screen and (min-width:1164px){
+    .header-center {
+        display: flex;
+    }
+}
+
+.header-center a {
+    color: #000000;
+    font-weight: 600;
+    /* Transition updated to include duration */
+    transition: color 0.3s ease; 
+}
+
+#A, #B, #C, #D, #E, .contact {
+    border: 1px solid #000000;
+    height: auto;
+    width: auto;
+    background-color: #ffffff; 
+    /* Added blur radius and color for better shadow visibility */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.1s ease;
+}
+
+#A:hover, #B:hover, #C:hover, #D:hover, #E:hover, .contact:hover {
+    background-color: #1f6996; 
+    color: white;
+}
+
+.contact {
+    color: #191717;
+    font-weight: bold; 
+    padding: 10px 15px;
+    border: 2px solid #333; 
+    background-color: #a8dadc;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Display the contact button on large screens */
+@media screen and (min-width:1164px) {
+    .contact {
+        display: flex;
+    }
+}
+
+.contact:hover {
+    background-color: #ff0000;
+    color: white; 
+}
+
+.Hamburger {
+    margin-left: 100px;
+    background-color: white;
+    border: none;
+    display: none;
+}
+
+/* Display hamburger button on smaller screens */
+@media screen and (max-width:1164px) {
+    .Hamburger {
+        display: flex;
+    }
+}
+
+.content {
+    margin: 10px;
+    height: 100vh;
+    width: 95vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+}
+
+@media screen and (max-width:1312px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.content-left {
+    height: auto;
+    width: auto;
+    margin: 50px;
+    text-align: center;
+    animation: slidfromleft 1s ease forwards;
+}
+
+@keyframes slidfromleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.label {
+    font-size: 2rem;
+    color: #005f99;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+/* Applied display grid for layout management */
+.label, .title, .c1 {
+    display: grid;
+    grid-template-rows: 120px;
+}
+
+.c1 {
+    font-size: 1.9rem;
+    color: #ff0000;
+}
+
+.b1, .b2 {
+    height: auto;
+    width: auto;
+    border: 2px solid black;
+    margin: 40px;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* Transition updated to all properties with duration */
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f63535;
+    color: #ffffff;
+}
+
+.b1:hover, .b2:hover {
+    color: #003d7b;
+    background-color: #fff3f3;
+}
+
+.content-right {
+    /* Adjusted opacity for slide animation */
+    animation: slidefromrightside 1s ease;
+}
+
+@keyframes slidefromrightside {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.group-buttons{
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+}
