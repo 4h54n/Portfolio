@@ -1,4 +1,3 @@
-/* General Reset for padding, margins, box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,7 @@ body {
     font-family: 'Arial', sans-serif; 
 }
 
+/* Header Container */
 .header-container {
     width: 100vw;
     height: 10vh;
@@ -42,8 +42,7 @@ body {
     font-size: 20px;
 }
 
-/* Media query adjusted to show .header-center on large screens (min 1024px instead of 2500px) */
-@media screen and (min-width:1164px){
+@media screen and (min-width: 1164px) {
     .header-center {
         display: flex;
     }
@@ -52,7 +51,6 @@ body {
 .header-center a {
     color: #000000;
     font-weight: 600;
-    /* Transition updated to include duration */
     transition: color 0.3s ease; 
 }
 
@@ -61,7 +59,6 @@ body {
     height: auto;
     width: auto;
     background-color: #ffffff; 
-    /* Added blur radius and color for better shadow visibility */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; 
     font-size: 20px;
@@ -84,8 +81,7 @@ body {
     display: none;
 }
 
-/* Display the contact button on large screens */
-@media screen and (min-width:1164px) {
+@media screen and (min-width: 1164px) {
     .contact {
         display: flex;
     }
@@ -103,8 +99,7 @@ body {
     display: none;
 }
 
-/* Display hamburger button on smaller screens */
-@media screen and (max-width:1164px) {
+@media screen and (max-width: 1164px) {
     .Hamburger {
         display: flex;
     }
@@ -119,7 +114,7 @@ body {
     margin-top: 200px;
 }
 
-@media screen and (max-width:1312px) {
+@media screen and (max-width: 1312px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -155,7 +150,6 @@ body {
     font-size: 3rem;
 }
 
-/* Applied display grid for layout management */
 .label, .title, .c1 {
     display: grid;
     grid-template-rows: 120px;
@@ -175,7 +169,6 @@ body {
     border-radius: 7px;
     font-size: 1.2rem;
     font-weight: bold;
-    /* Transition updated to all properties with duration */
     transition: all 0.3s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     background-color: #f63535;
@@ -188,7 +181,6 @@ body {
 }
 
 .content-right {
-    /* Adjusted opacity for slide animation */
     animation: slidefromrightside 1s ease;
 }
 
@@ -202,8 +194,41 @@ body {
         transform: translateX(0);
     }
 }
-.group-buttons{
+
+.group-buttons {
     display: flex;
     margin-top: 150px;
     justify-content: center;
+}
+
+.comp-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 50px;
+}
+
+.comapany-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    background-color: #898989;
+    border-radius: 70px;
+    height: auto;
+    width: auto;
+    color: #f8fcff;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 700px;
+    padding: 100px;
+}
+
+@media screen and (max-width: 1500px) {
+    .comapany-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-rows: repeat(2, auto); /* Two rows to avoid overlap */
+    }
 }
